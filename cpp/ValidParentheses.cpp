@@ -55,9 +55,11 @@ public:
 int main() {
     Solution solution;
 
-    std::cout << "Test case 1: "s << std::boolalpha << solution.isValid("()"s) << std::endl;
-    std::cout << "Test case 2: "s << std::boolalpha << solution.isValid("()[]{}"s) << std::endl;
-    std::cout << "Test case 3: "s << std::boolalpha << solution.isValid("(]"s) << std::endl;
-    std::cout << "Test case 4: "s << std::boolalpha << solution.isValid("([])"s) << std::endl;
-    std::cout << "Test case 5: "s << std::boolalpha << solution.isValid("([)]"s) << std::endl;
+    assert(solution.isValid("()"s) == true);
+    assert(solution.isValid("()[]{}"s) == true);
+    assert(solution.isValid("(]"s) == false);
+    assert(solution.isValid("([])"s) == true);
+    assert(solution.isValid("([)]"s) == false);
+
+    std::cout << "Tests passed!"s << std::endl;
 }
