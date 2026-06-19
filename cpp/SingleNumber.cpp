@@ -18,14 +18,18 @@ public:
 };
 
 int main() {
+    using namespace std::literals;
+
     Solution solution{};
 
     std::vector<int> test_case1 = {2, 2, 1};
-    std::cout << "Test case1: " << solution.singleNumber(test_case1) << std::endl;
+    assert(solution.singleNumber(test_case1) == 1);
 
     std::vector<int> test_case2 = {4, 1, 2, 1, 2};
-    std::cout << "Test case2: " << solution.singleNumber(test_case2) << std::endl;
+    assert(solution.singleNumber(test_case2) == 4);
 
     std::vector<int> test_case3 = {1};
-    std::cout << "Test case3: " << solution.singleNumber(test_case3) << std::endl;
+    assert(solution.singleNumber(test_case3) == 1);
+
+    std::cout << "Test passed!"s << std::endl;
 }
