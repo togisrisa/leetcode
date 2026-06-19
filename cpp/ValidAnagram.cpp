@@ -35,6 +35,8 @@ int main() {
 
     Solution solution;
 
-    std::cout << "Test case 1: " << std::boolalpha << solution.isAnagram("anagram"s, "nagaram"s) << std::endl;
-    std::cout << "Test case 2: " << solution.isAnagram("rat"s, "car"s) << std::endl;
+    assert(solution.isAnagram("anagram"s, "nagaram"s) == true);
+    assert(solution.isAnagram("rat"s, "car"s) == false);
+
+    std::cout << "Tests passed!"s << std::endl;
 }
